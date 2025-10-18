@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contatta THE GARRET - Palestra esclusiva a Treviglio. Scrivi, chiama o vieni a trovarci. Siamo qui per rispondere a ogni tua domanda.">
+    <title>Contatti - THE GARRET</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">THE GARRET</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#experience">Esperienza</a>
+                <a href="about.html">Chi Siamo</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html" class="cta-nav">Contatti</a>
+            </div>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero page-hero">
+        <div class="hero-label">Siamo Qui per Te</div>
+        <h1 class="hero-title">Contattaci</h1>
+        <p class="hero-description">
+            Hai domande? Vuoi prenotare una visita? Sei un Personal Trainer interessato?<br>
+            Scrivici, chiamaci o passa a trovarci. Rispondiamo sempre.
+        </p>
+    </section>
+
+    <!-- CONTACT METHODS SECTION -->
+    <section class="contact-methods-section">
+        <div class="contact-methods-container">
+            <div class="methods-grid">
+                <a href="mailto:info@thegarret.it" class="method-card">
+                    <div class="method-icon">📧</div>
+                    <h3 class="method-title">Email</h3>
+                    <p class="method-detail">info@thegarret.it</p>
+                    <p class="method-description">Risposta entro 24h</p>
+                </a>
+
+                <a href="tel:+393401234567" class="method-card">
+                    <div class="method-icon">📱</div>
+                    <h3 class="method-title">Telefono</h3>
+                    <p class="method-detail">+39 340 123 4567</p>
+                    <p class="method-description">Lun-Ven 9:00-19:00</p>
+                </a>
+
+                <a href="https://wa.me/393401234567" target="_blank" class="method-card">
+                    <div class="method-icon">💬</div>
+                    <h3 class="method-title">WhatsApp</h3>
+                    <p class="method-detail">Messaggio Diretto</p>
+                    <p class="method-description">Risposta rapida</p>
+                </a>
+
+                <a href="https://maps.google.com/?q=Via+Roma+15+Treviglio" target="_blank" class="method-card">
+                    <div class="method-icon">📍</div>
+                    <h3 class="method-title">Vieni di Persona</h3>
+                    <p class="method-detail">Via Roma 15, Treviglio</p>
+                    <p class="method-description">Su appuntamento</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTACT SECTION -->
+    <section class="main-contact-section">
+        <div class="main-contact-container">
+            <div class="contact-grid">
+                
+                <!-- CONTACT FORM -->
+                <div class="contact-form-wrapper">
+                    <div class="section-label">Invia un Messaggio</div>
+                    <h2 class="form-title">Scrivici Direttamente</h2>
+                    <p class="form-description">
+                        Compila il form qui sotto e ti risponderemo al più presto. 
+                        Se preferisci, puoi anche scriverci direttamente a info@thegarret.it
+                    </p>
+
+                    <!-- Netlify Form -->
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+                        <!-- Honeypot for spam protection -->
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden">
+                            <label>Don't fill this out: <input name="bot-field"></label>
+                        </p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nome e Cognome *</label>
+                                <input type="text" id="name" name="name" required placeholder="Mario Rossi">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="mario@esempio.it">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefono</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+39 340 123 4567">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Oggetto *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Seleziona...</option>
+                                    <option value="info-generale">Informazioni Generali</option>
+                                    <option value="prenotazione">Prenotazione Sessione</option>
+                                    <option value="personal-trainer">Sono un Personal Trainer</option>
+                                    <option value="partnership">Partnership Commerciale</option>
+                                    <option value="altro">Altro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Messaggio *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Scrivi qui il tuo messaggio..."></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="privacy" required>
+                                <span>Ho letto e accetto la <a href="#" target="_blank">Privacy Policy</a> *</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter">
+                                <span>Voglio ricevere aggiornamenti e offerte via email</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            Invia Messaggio
+                        </button>
+
+                        <p class="form-note">* Campi obbligatori</p>
+                    </form>
+                </div>
+
+                <!-- CONTACT INFO SIDEBAR -->
+                <div class="contact-info-sidebar">
+                    <div class="info-card">
+                        <h3 class="info-title">Informazioni di Contatto</h3>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📧</div>
+                            <div class="info-content">
+                                <strong>Email Generale</strong>
+                                <a href="mailto:info@thegarret.it">info@thegarret.it</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">💼</div>
+                            <div class="info-content">
+                                <strong>Personal Trainer</strong>
+                                <a href="mailto:pt@thegarret.it">pt@thegarret.it</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📱</div>
+                            <div class="info-content">
+                                <strong>Telefono</strong>
+                                <a href="tel:+393401234567">+39 340 123 4567</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <strong>Indirizzo</strong>
+                                <p>Via Roma 15<br>24047 Treviglio (BG)</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">🕐</div>
+                            <div class="info-content">
+                                <strong>Orari Struttura</strong>
+                                <p>Lun-Dom: 5:00 - 23:00<br><small>Accesso su prenotazione</small></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">💬</div>
+                            <div class="info-content">
+                                <strong>WhatsApp</strong>
+                                <a href="https://wa.me/393401234567" target="_blank">Messaggio diretto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-card">
+                        <h3 class="social-title">Seguici sui Social</h3>
+                        <div class="social-links">
+                            <a href="#" target="_blank" class="social-link" aria-label="Instagram">
+                                <span class="social-icon">📸</span>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" target="_blank" class="social-link" aria-label="Facebook">
+                                <span class="social-icon">👥</span>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" target="_blank" class="social-link" aria-label="LinkedIn">
+                                <span class="social-icon">💼</span>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cta-card">
+                        <h3 class="cta-card-title">Preferisci Telefonare?</h3>
+                        <p class="cta-card-text">Parliamo direttamente, siamo disponibili dal lunedì al venerdì.</p>
+                        <a href="tel:+393401234567" class="btn-secondary">Chiamaci Ora</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="map-section">
+        <div class="map-container">
+            <div class="map-content">
+                <div class="section-label">Dove Siamo</div>
+                <h2 class="map-title">Vieni a Trovarci</h2>
+                <p class="map-description">
+                    Siamo a Treviglio, in provincia di Bergamo, facilmente raggiungibili 
+                    dalla A35 Brebemi e dalla stazione ferroviaria.
+                </p>
+                
+                <div class="map-details">
+                    <div class="map-detail-item">
+                        <span class="detail-icon">🚗</span>
+                        <div>
+                            <strong>In Auto</strong>
+                            <p>Parcheggio gratuito disponibile</p>
+                        </div>
+                    </div>
+                    <div class="map-detail-item">
+                        <span class="detail-icon">🚆</span>
+                        <div>
+                            <strong>In Treno</strong>
+                            <p>5 minuti dalla stazione di Treviglio</p>
+                        </div>
+                    </div>
+                    <div class="map-detail-item">
+                        <span class="detail-icon">🚌</span>
+                        <div>
+                            <strong>In Autobus</strong>
+                            <p>Fermate linee urbane nelle vicinanze</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://maps.google.com/?q=Via+Roma+15+Treviglio" target="_blank" class="btn-primary">
+                    Apri in Google Maps
+                </a>
+            </div>
+
+            <div class="map-embed">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.8907!2d9.5919!3d45.5205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDMxJzEzLjgiTiA5wrAzNScyNy4wIkU!5e0!3m2!1sit!2sit!4v1234567890"
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ QUICK SECTION -->
+    <section class="faq-quick-section">
+        <div class="faq-quick-container">
+            <div class="section-label">Domande Frequenti</div>
+            <h2 class="section-title">Hai Ancora Dubbi?</h2>
+            <p class="faq-intro">Consulta la nostra sezione FAQ completa per risposte immediate</p>
+            
+            <div class="faq-quick-grid">
+                <div class="faq-quick-card">
+                    <h3 class="faq-quick-title">Come funziona la prenotazione?</h3>
+                    <p class="faq-quick-text">Prenoti online, paghi e ricevi il codice di accesso. Semplice!</p>
+                    <a href="faq.html#prenotazioni" class="faq-quick-link">Scopri di più →</a>
+                </div>
+
+                <div class="faq-quick-card">
+                    <h3 class="faq-quick-title">Quanto costa?</h3>
+                    <p class="faq-quick-text">15€ per 1 ora di spazio riservato. Pacchetti da 10 ore disponibili.</p>
+                    <a href="index.html#pricing" class="faq-quick-link">Vedi prezzi →</a>
+                </div>
+
+                <div class="faq-quick-card">
+                    <h3 class="faq-quick-title">Sono un Personal Trainer</h3>
+                    <p class="faq-quick-text">Abbiamo tariffe speciali e pacchetti dedicati per PT professionisti.</p>
+                    <a href="faq.html#pt" class="faq-quick-link">Info per PT →</a>
+                </div>
+
+                <div class="faq-quick-card">
+                    <h3 class="faq-quick-title">Posso venire a visitare?</h3>
+                    <p class="faq-quick-text">Certo! Contattaci per fissare un appuntamento e fare un tour.</p>
+                    <a href="#" class="faq-quick-link">Prenota tour →</a>
+                </div>
+            </div>
+
+            <div class="faq-cta">
+                <a href="faq.html" class="btn-secondary">Vedi Tutte le FAQ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <div class="footer-brand">THE GARRET</div>
+                <p class="footer-tagline">
+                    Il tuo spazio esclusivo di allenamento a Treviglio. 
+                    Niente attese, solo risultati.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Scopri</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#pricing">Prezzi</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Compagnia</h4>
+                <ul>
+                    <li><a href="about.html">Chi Siamo</a></li>
+                    <li><a href="contact.html">Contatti</a></li>
+                    <!-- <li><a href="#">Partnership</a></li> -->
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Legale</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Termini di Servizio</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 The Garret S.R.L. Tutti i diritti riservati. | Via Roma 6, Treviglio (BG)</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
