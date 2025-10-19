@@ -305,13 +305,15 @@ nav.scrolled {
 .feature-icon {
     width: 60px;
     height: 60px;
-    background: rgba(183, 121, 31, 0.1);
-    border: 2px solid var(--secondary);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 25px;
     font-size: 1.5rem;
+    background: none;        
+    border: none;            
+    box-shadow: none;        
+    padding: 0;              
 }
 
 .feature-icon svg {

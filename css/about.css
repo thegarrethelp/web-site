@@ -211,6 +211,24 @@
     line-height: 1.8;
 }
 
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: none;        
+    border: none;            
+    box-shadow: none;        
+    padding: 0;              
+}
+
+.feature-icon svg {
+    fill: var(--secondary);
+    transition: all 0.3s ease;
+}
+
 /* TEAM SECTION */
 .team-section {
     background: var(--primary);
