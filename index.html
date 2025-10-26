@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE GARRET - Il Tuo Spazio Esclusivo di Allenamento</title>
+    <title >THE GARRET - Il Tuo Spazio Esclusivo di Allenamento</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Stylesheet -->
@@ -15,13 +15,16 @@
     <!-- NAVIGATION -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">THE GARRET</div>
+            
+            <div href="#top" class="logo"><a href="#top" class="logo" >THE GARRET</a></div>
             <div class="nav-links">
-                <a href="#experience">Esperienza</a>
+                <a href="#experience">Experience</a>
                 <a href="#pricing">Prezzi</a>
-                <a href="#contact">Contatti</a>
+                <a href="about.html">Chi Siamo</a>
                 <a href="faq.html">FAQ</a>
-                <button class="cta-nav">Prenota Ora</button>
+                <a href="#app-download">
+                    <button class="cta-nav">Scarica APP</button>
+                </a>
             </div>
             <div class="mobile-menu">
                 <span></span>
@@ -32,7 +35,7 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero" id="top">
         <div class="hero-bg"></div>
         <div class="hero-content">
             <div class="hero-subtitle">Allenamento Esclusivo</div>
@@ -41,7 +44,9 @@
                 Il tuo spazio riservato. Nessuna attesa. Nessuna distrazione.<br>
                 Solo tu e il tuo allenamento.
             </p>
-            <button class="hero-cta">Prenota la Tua Sessione</button>
+            <a href="#app-download">
+                <button class="hero-cta">Prenota in APP</button>
+            </a>
         </div>
         <div class="scroll-indicator">
             <span></span>
@@ -142,6 +147,21 @@
             <div class="experience-image"></div>
             <div class="experience-content">
                 <div class="experience-number">01</div>
+                <h2 class="experience-title">Pensato per Professionisti</h2>
+                <p class="experience-text">
+                    Sei un Personal Trainer? The Garret è lo spazio che stavi cercando. 
+                    Porta i tuoi clienti in un ambiente esclusivo dove la tua professionalità 
+                    risalta e il loro allenamento è al centro dell'attenzione.
+                </p>
+                <a href="#" class="experience-link">
+                    Offerte per PT →
+                </a>
+            </div>
+        </div>
+        
+        <div class="experience-grid">
+            <div class="experience-content">
+                <div class="experience-number">02</div>
                 <h2 class="experience-title">Un Nuovo Modo di Allenarti</h2>
                 <p class="experience-text">
                     The Garret ridefinisce il concetto di palestra. Non è un luogo di 
@@ -151,21 +171,6 @@
                 </p>
                 <a href="#" class="experience-link">
                     Scopri di più →
-                </a>
-            </div>
-        </div>
-        
-        <div class="experience-grid">
-            <div class="experience-content">
-                <div class="experience-number">02</div>
-                <h2 class="experience-title">Pensato per Professionisti</h2>
-                <p class="experience-text">
-                    Sei un Personal Trainer? The Garret è lo spazio che stavi cercando. 
-                    Porta i tuoi clienti in un ambiente esclusivo dove la tua professionalità 
-                    risalta e il loro allenamento è al centro dell'attenzione.
-                </p>
-                <a href="#" class="experience-link">
-                    Offerte per PT →
                 </a>
             </div>
             <div class="experience-image"></div>
@@ -223,7 +228,7 @@
     </section>
 
     <!-- APP DOWNLOAD SECTION -->
-    <section class="app-download">
+    <section id="app-download" class="app-download">
         <div class="app-download-container">
             <div class="app-download-content">
                 <div class="section-label">La Tua Palestra in Tasca</div>
@@ -302,7 +307,9 @@
                 Prenota la tua prima sessione e sperimenta The Garret.
             </p>
             <div class="cta-buttons">
-                <button class="cta-primary">Prenota Sessione</button>
+                <a href="#app-download">
+                    <button class="cta-primary">Prenota in APP</button>
+                </a>
                 <button class="cta-secondary">Tour Virtuale</button>
             </div>
         </div>
