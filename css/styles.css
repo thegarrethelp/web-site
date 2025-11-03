@@ -1072,31 +1072,56 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .mobile-menu {
+        display: flex;
+        z-index: 1001;
+    }
+
     .nav-links {
         position: fixed;
         top: 70px;
-        right: -100%;
-        width: 250px;
-        height: calc(100vh - 70px);
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
         background: rgba(45, 55, 72, 0.98);
         backdrop-filter: blur(10px);
         flex-direction: column;
-        padding: 30px 20px;
-        gap: 20px;
-        transition: right 0.3s ease;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        padding: 0;
+        gap: 0;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     .nav-links.active {
-        right: 0;
+        max-height: 400px;
+        padding: 20px;
     }
 
-    .mobile-menu {
-        display: flex;
+    .nav-links a {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(247, 250, 252, 0.1);
+        width: 100%;
+    }
+
+    .nav-links a:last-of-type {
+        border-bottom: none;
+    }
+
+    .cta-nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Animazione hamburger */
+    .mobile-menu span {
+        transition: all 0.3s ease;
     }
 
     .mobile-menu.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(6px, 6px);
     }
 
     .mobile-menu.active span:nth-child(2) {
@@ -1104,14 +1129,6 @@ footer {
     }
 
     .mobile-menu.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
-    }
-
-    .mobile-menu span {
-        transition: all 0.3s ease;
-    }
-
-    .cta-nav {
-        width: 100%;
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 }

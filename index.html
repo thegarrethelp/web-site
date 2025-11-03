@@ -422,10 +422,28 @@
     const mobileMenu = document.querySelector('.mobile-menu');
     const navLinks = document.querySelector('.nav-links');
 
-    if (mobileMenu) {
-        mobileMenu.addEventListener('click', function() {
+    if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
             navLinks.classList.toggle('active');
-            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Chiudi il menu quando clicchi su un link
+        const menuLinks = navLinks.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Chiudi il menu quando clicchi fuori
+        document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && !mobileMenu.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
         });
     }
     </script>
