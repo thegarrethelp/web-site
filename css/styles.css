@@ -1018,7 +1018,7 @@ footer {
 /* ============================================
    RESPONSIVE
    ============================================ */
-@media (max-width: 968px) {
+/*@media (max-width: 968px) {
     .nav-links {
         display: none;
     }
@@ -1069,7 +1069,7 @@ footer {
     .faq-question h3 {
         font-size: 1rem;
     }
-}
+}*/
 
 /* Nascondi mobile menu su desktop */
 .mobile-menu {
