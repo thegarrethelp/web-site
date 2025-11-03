@@ -510,5 +510,18 @@
             Sede Legale: Vicolo Poggetto 6 - 24047, Treviglio (BG) - P.IVA: 04865730164 - Numero REA: BG - 495099 - Capitale Sociale: 10.000 €</p>
         </div>
     </footer>
+
+        <script>
+    // Mobile menu toggle
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    }
+    </script>
 </body>
 </html>
