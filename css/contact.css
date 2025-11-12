@@ -502,24 +502,52 @@
     margin-top: 40px;
 }
 
-/* RESPONSIVE */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Nascondi mobile menu su desktop */
+.mobile-menu {
+    display: none;
+}
+
+/* TABLET */
 @media (max-width: 968px) {
+    /* NAVIGATION */
+    .mobile-menu {
+        display: flex;
+    }
+
+    /* CONTACT METHODS */
+    .contact-methods-section {
+        padding: 60px 30px;
+    }
+
     .methods-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    /* MAIN CONTACT */
+    .main-contact-section {
+        padding: 80px 30px;
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: 50px;
     }
 
     .contact-form-wrapper {
-        padding: 35px;
+        padding: 40px;
     }
 
     .form-row {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
+    /* MAP SECTION */
     .map-container {
         grid-template-columns: 1fr;
     }
@@ -529,32 +557,21 @@
     }
 
     .map-embed {
-        min-height: 400px;
+        min-height: 450px;
+    }
+
+    /* FAQ QUICK */
+    .faq-quick-section {
+        padding: 80px 30px;
     }
 
     .faq-quick-grid {
         grid-template-columns: 1fr;
+        gap: 25px;
     }
 }
 
-@media (max-width: 568px) {
-    .methods-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-form-wrapper {
-        padding: 25px;
-    }
-
-    .form-title {
-        font-size: 2rem;
-    }
-
-    .map-title {
-        font-size: 2.5rem;
-    }
-}
-
+/* MOBILE */
 @media (max-width: 768px) {
     /* NAVIGATION */
     .nav-container {
@@ -600,121 +617,108 @@
         width: 100%;
     }
 
-    /* HERO */
-    .hero-equipment h1 {
-        font-size: 2.5rem;
-        letter-spacing: 3px;
+    /* CONTACT METHODS */
+    .contact-methods-section {
+        padding: 50px 20px;
     }
 
-    .hero-equipment p {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
-
-    .hero-equipment {
-        padding: 120px 20px 60px;
-    }
-
-    /* INTRO SECTION */
-    .intro-title {
-        font-size: 1.8rem;
-    }
-
-    .intro-text {
-        font-size: 1rem;
-    }
-
-    .equipment-stats {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-    }
-
-    .stat-number {
-        font-size: 2.5rem;
-    }
-
-    .stat-label {
-        font-size: 0.8rem;
-    }
-
-    /* EQUIPMENT SECTIONS */
-    .equipment-section {
-        padding: 50px 15px;
-    }
-
-    .equipment-container {
+    .methods-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 20px;
     }
 
-    .equipment-section:nth-child(even) .equipment-container {
-        direction: ltr;
+    .method-card {
+        padding: 30px 25px;
     }
 
-    .equipment-image {
-        height: 300px;
-        margin: 0 auto;
-        max-width: 400px;
+    .method-icon {
+        font-size: 2.5rem;
     }
 
-    .equipment-content {
-        padding: 10px;
+    .method-title {
+        font-size: 1.1rem;
     }
 
-    .equipment-title {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-    }
-
-    .equipment-description {
-        font-size: 0.95rem;
-    }
-
-    .equipment-specs {
-        padding: 20px;
-    }
-
-    .spec-title {
-        font-size: 1rem;
-    }
-
-    .spec-list li {
-        font-size: 0.9rem;
-        padding: 8px 0;
-    }
-
-    .benefit-item {
-        padding: 12px 15px;
-    }
-
-    .benefit-title {
-        font-size: 0.95rem;
-    }
-
-    .benefit-text {
-        font-size: 0.85rem;
-    }
-
-    /* CTA SECTION */
-    .cta-equipment {
+    /* MAIN CONTACT */
+    .main-contact-section {
         padding: 60px 20px;
     }
 
-    .cta-equipment h2 {
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .form-title {
         font-size: 2rem;
         letter-spacing: 2px;
     }
 
-    .cta-equipment p {
-        font-size: 1rem;
-        padding: 0 10px;
+    .form-description {
+        font-size: 0.9rem;
     }
 
-    .cta-button {
-        padding: 15px 35px;
-        font-size: 1rem;
-        width: 90%;
-        max-width: 350px;
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        padding: 15px 30px;
+        font-size: 0.9rem;
+    }
+
+    /* SIDEBAR */
+    .info-card,
+    .social-card,
+    .cta-card {
+        padding: 25px 20px;
+    }
+
+    .info-title,
+    .social-title,
+    .cta-card-title {
+        font-size: 1.3rem;
+    }
+
+    /* MAP SECTION */
+    .map-content {
+        padding: 50px 20px;
+    }
+
+    .map-title {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    .map-description {
+        font-size: 0.95rem;
+    }
+
+    .map-embed {
+        min-height: 350px;
+    }
+
+    /* FAQ QUICK */
+    .faq-quick-section {
+        padding: 60px 20px;
+    }
+
+    .faq-quick-card {
+        padding: 30px 25px;
+    }
+
+    .faq-quick-title {
+        font-size: 1.1rem;
+    }
+
+    .faq-quick-text {
+        font-size: 0.9rem;
     }
 
     /* FOOTER */
@@ -757,19 +761,31 @@
 
 /* EXTRA SMALL DEVICES */
 @media (max-width: 480px) {
-    .hero-equipment h1 {
+    /* CONTACT METHODS */
+    .method-icon {
         font-size: 2rem;
     }
 
-    .equipment-stats {
-        grid-template-columns: 1fr;
+    /* FORM */
+    .form-title {
+        font-size: 1.8rem;
     }
 
-    .equipment-title {
-        font-size: 1.5rem;
+    .contact-form-wrapper {
+        padding: 25px 15px;
     }
 
-    .equipment-image {
-        height: 250px;
+    /* MAP */
+    .map-title {
+        font-size: 2rem;
+    }
+
+    .map-embed {
+        min-height: 300px;
+    }
+
+    /* FAQ QUICK */
+    .faq-quick-card {
+        padding: 25px 20px;
     }
 }

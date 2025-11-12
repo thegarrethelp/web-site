@@ -386,19 +386,57 @@
     height: 100%;
 }
 
-/* RESPONSIVE */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Nascondi mobile menu su desktop */
+.mobile-menu {
+    display: none;
+}
+
+/* TABLET */
 @media (max-width: 968px) {
+    /* NAVIGATION */
+    .mobile-menu {
+        display: flex;
+    }
+
+    /* STORY SECTION */
+    .story-section {
+        padding: 80px 30px;
+    }
+
     .story-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 50px;
     }
 
     .story-image .image-placeholder {
-        height: 350px;
+        height: 400px;
+    }
+
+    .story-title {
+        font-size: 2.5rem;
+    }
+
+    /* MISSION SECTION */
+    .mission-section {
+        padding: 80px 30px;
     }
 
     .mission-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mission-card {
+        padding: 40px 30px;
+    }
+
+    /* STATS SECTION */
+    .stats-section {
+        padding: 80px 30px;
     }
 
     .stats-grid {
@@ -406,46 +444,39 @@
         gap: 40px;
     }
 
-    .stat-number {
-        font-size: 4rem;
+    /* DIFFERENT SECTION */
+    .different-section {
+        padding: 80px 30px;
     }
 
     .different-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* TEAM SECTION */
+    .team-section {
+        padding: 80px 30px;
     }
 
     .team-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    /* LOCATION SECTION */
+    .location-section {
+        padding: 80px 30px;
     }
 
     .location-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 50px;
     }
 
     .location-map {
-        height: 400px;
+        height: 450px;
     }
-}
-
-@media (max-width: 568px) {
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .story-title,
-    .location-title {
-        font-size: 2.5rem;
-    }
-
-    .mission-title {
-        font-size: 1.5rem;
-    }
-}
-
-/* Nascondi mobile menu su desktop */
-.mobile-menu {
-    display: none;
 }
 
 /* MOBILE */
@@ -494,121 +525,126 @@
         width: 100%;
     }
 
-    /* HERO */
-    .hero-equipment h1 {
+    /* STORY SECTION */
+    .story-section {
+        padding: 60px 20px;
+    }
+
+    .story-grid {
+        gap: 40px;
+    }
+
+    .story-image .image-placeholder {
+        height: 300px;
+    }
+
+    .story-title {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .story-text {
+        font-size: 0.95rem;
+    }
+
+    /* MISSION SECTION */
+    .mission-section {
+        padding: 60px 20px;
+    }
+
+    .mission-card {
+        padding: 35px 25px;
+    }
+
+    .mission-icon {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .mission-title {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .mission-text {
+        font-size: 0.9rem;
+    }
+
+    /* STATS SECTION */
+    .stats-section {
+        padding: 60px 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .stat-number {
+        font-size: 3.5rem;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+    }
+
+    /* DIFFERENT SECTION */
+    .different-section {
+        padding: 60px 20px;
+    }
+
+    .different-item {
+        padding: 30px 25px;
+    }
+
+    .different-number {
+        font-size: 2.5rem;
+    }
+
+    .different-title {
+        font-size: 1.1rem;
+    }
+
+    .different-text {
+        font-size: 0.9rem;
+    }
+
+    /* TEAM SECTION */
+    .team-section {
+        padding: 60px 20px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .member-image .image-placeholder {
+        width: 180px;
+        height: 180px;
+        font-size: 3rem;
+    }
+
+    .member-name {
+        font-size: 1.5rem;
+    }
+
+    .member-bio {
+        font-size: 0.85rem;
+    }
+
+    /* LOCATION SECTION */
+    .location-section {
+        padding: 60px 20px;
+    }
+
+    .location-title {
         font-size: 2.5rem;
         letter-spacing: 3px;
     }
 
-    .hero-equipment p {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
-
-    .hero-equipment {
-        padding: 120px 20px 60px;
-    }
-
-    /* INTRO SECTION */
-    .intro-title {
-        font-size: 1.8rem;
-    }
-
-    .intro-text {
-        font-size: 1rem;
-    }
-
-    .equipment-stats {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-    }
-
-    .stat-number {
-        font-size: 2.5rem;
-    }
-
-    .stat-label {
-        font-size: 0.8rem;
-    }
-
-    /* EQUIPMENT SECTIONS */
-    .equipment-section {
-        padding: 50px 15px;
-    }
-
-    .equipment-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .equipment-section:nth-child(even) .equipment-container {
-        direction: ltr;
-    }
-
-    .equipment-image {
-        height: 300px;
-        margin: 0 auto;
-        max-width: 400px;
-    }
-
-    .equipment-content {
-        padding: 10px;
-    }
-
-    .equipment-title {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-    }
-
-    .equipment-description {
-        font-size: 0.95rem;
-    }
-
-    .equipment-specs {
-        padding: 20px;
-    }
-
-    .spec-title {
-        font-size: 1rem;
-    }
-
-    .spec-list li {
-        font-size: 0.9rem;
-        padding: 8px 0;
-    }
-
-    .benefit-item {
-        padding: 12px 15px;
-    }
-
-    .benefit-title {
-        font-size: 0.95rem;
-    }
-
-    .benefit-text {
-        font-size: 0.85rem;
-    }
-
-    /* CTA SECTION */
-    .cta-equipment {
-        padding: 60px 20px;
-    }
-
-    .cta-equipment h2 {
-        font-size: 2rem;
-        letter-spacing: 2px;
-    }
-
-    .cta-equipment p {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
-
-    .cta-button {
-        padding: 15px 35px;
-        font-size: 1rem;
-        width: 90%;
-        max-width: 350px;
+    .location-map {
+        height: 350px;
     }
 
     /* FOOTER */
@@ -651,19 +687,46 @@
 
 /* EXTRA SMALL DEVICES */
 @media (max-width: 480px) {
-    .hero-equipment h1 {
+    /* STORY SECTION */
+    .story-title {
+        font-size: 1.8rem;
+    }
+
+    .story-image .image-placeholder {
+        height: 250px;
+    }
+
+    /* MISSION SECTION */
+    .mission-title {
+        font-size: 1.3rem;
+    }
+
+    /* STATS SECTION */
+    .stat-number {
+        font-size: 3rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
+    /* TEAM SECTION */
+    .member-image .image-placeholder {
+        width: 150px;
+        height: 150px;
+        font-size: 2.5rem;
+    }
+
+    .member-name {
+        font-size: 1.3rem;
+    }
+
+    /* LOCATION SECTION */
+    .location-title {
         font-size: 2rem;
     }
 
-    .equipment-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .equipment-title {
-        font-size: 1.5rem;
-    }
-
-    .equipment-image {
-        height: 250px;
+    .location-map {
+        height: 300px;
     }
 }

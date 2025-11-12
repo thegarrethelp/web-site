@@ -1017,85 +1017,36 @@ footer {
 
 /* ============================================
    RESPONSIVE
+
+/* ============================================
+   RESPONSIVE
    ============================================ */
-/*@media (max-width: 968px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .mobile-menu {
-        display: flex;
-    }
-    
-    .hero-title {
-        font-size: 4rem;
-    }
-    
-    .hero.page-hero .hero-title {
-        font-size: 3.5rem;
-    }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .experience-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .experience-image {
-        min-height: 400px;
-    }
-    
-    .experience-content {
-        padding: 60px 40px;
-    }
-    
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .cta-buttons,
-    .faq-cta-buttons {
-        flex-direction: column;
-    }
-    
-    .faq-question h3 {
-        font-size: 1rem;
-    }
-}*/
 
 /* Nascondi mobile menu su desktop */
 .mobile-menu {
     display: none;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
+/* TABLET & MOBILE */
+@media (max-width: 968px) {
     /* NAVIGATION */
     .nav-container {
         padding: 15px 20px;
     }
 
     .logo {
-        font-size: 1.4rem;
-        letter-spacing: 2px;
+        font-size: 1.6rem;
+        letter-spacing: 3px;
     }
 
     .mobile-menu {
-        display: flex !important;
+        display: flex;
     }
 
     .nav-links {
         display: none;
         position: fixed;
-        top: 60px;
+        top: 70px;
         left: 0;
         right: 0;
         width: 100%;
@@ -1104,8 +1055,8 @@ footer {
         flex-direction: column;
         padding: 20px;
         gap: 20px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        z-index: 999;
     }
 
     .nav-links.active {
@@ -1113,150 +1064,140 @@ footer {
     }
 
     .nav-links a {
-        padding: 12px 0;
+        padding: 15px 0;
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(183, 121, 31, 0.2);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
     }
 
     .cta-nav {
         width: 100%;
+        margin-top: 10px;
     }
 
     /* HERO */
-    .hero-equipment h1 {
+    .hero {
+        height: 80vh;
+        min-height: 600px;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+        letter-spacing: 6px;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+    }
+
+    /* FEATURES SECTION */
+    .features {
+        padding: 80px 20px;
+    }
+
+    .section-title {
         font-size: 2.5rem;
-        letter-spacing: 3px;
+        margin-bottom: 50px;
     }
 
-    .hero-equipment p {
-        font-size: 1rem;
-        padding: 0 10px;
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
     }
 
-    .hero-equipment {
-        padding: 120px 20px 60px;
+    /* EXPERIENCE SECTION */
+    .experience-grid {
+        grid-template-columns: 1fr;
     }
 
-    /* INTRO SECTION */
-    .intro-title {
-        font-size: 1.8rem;
+    .experience-image {
+        min-height: 350px;
+        order: 1;
     }
 
-    .intro-text {
-        font-size: 1rem;
+    .experience-content {
+        padding: 60px 30px;
+        order: 2;
     }
 
-    .equipment-stats {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
+    .experience-number {
+        font-size: 4rem;
     }
 
-    .stat-number {
-        font-size: 2.5rem;
+    .experience-title {
+        font-size: 2rem;
     }
 
-    .stat-label {
-        font-size: 0.8rem;
+    /* PRICING SECTION */
+    .pricing {
+        padding: 80px 20px;
     }
 
-    /* EQUIPMENT SECTIONS */
-    .equipment-section {
-        padding: 50px 15px;
-    }
-
-    .equipment-container {
+    .pricing-grid {
         grid-template-columns: 1fr;
         gap: 30px;
-    }
-
-    .equipment-section:nth-child(even) .equipment-container {
-        direction: ltr;
-    }
-
-    .equipment-image {
-        height: 300px;
+        max-width: 500px;
         margin: 0 auto;
-        max-width: 400px;
     }
 
-    .equipment-content {
-        padding: 10px;
+    /* APP DOWNLOAD SECTION */
+    .app-download {
+        padding: 80px 20px;
     }
 
-    .equipment-title {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
+    .app-download-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
     }
 
-    .equipment-description {
-        font-size: 0.95rem;
+    .app-mockup-container {
+        order: -1;
     }
 
-    .equipment-specs {
-        padding: 20px;
-    }
-
-    .spec-title {
-        font-size: 1rem;
-    }
-
-    .spec-list li {
-        font-size: 0.9rem;
-        padding: 8px 0;
-    }
-
-    .benefit-item {
-        padding: 12px 15px;
-    }
-
-    .benefit-title {
-        font-size: 0.95rem;
-    }
-
-    .benefit-text {
-        font-size: 0.85rem;
+    .app-phone {
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     /* CTA SECTION */
-    .cta-equipment {
-        padding: 60px 20px;
+    .cta-section {
+        padding: 80px 20px;
     }
 
-    .cta-equipment h2 {
-        font-size: 2rem;
-        letter-spacing: 2px;
+    .cta-title {
+        font-size: 3rem;
+        letter-spacing: 4px;
     }
 
-    .cta-equipment p {
-        font-size: 1rem;
-        padding: 0 10px;
+    .cta-text {
+        font-size: 1.1rem;
     }
 
-    .cta-button {
-        padding: 15px 35px;
-        font-size: 1rem;
-        width: 90%;
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-primary,
+    .cta-secondary {
+        width: 100%;
         max-width: 350px;
     }
 
     /* FOOTER */
     .footer-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .footer-brand {
-        font-size: 1.8rem;
-    }
-
-    .footer-section {
-        text-align: center;
-    }
-
-    .footer-bottom {
-        font-size: 0.8rem;
-        padding: 20px 10px;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
     }
 
     /* Animazione hamburger */
@@ -1277,21 +1218,275 @@ footer {
     }
 }
 
-/* EXTRA SMALL DEVICES */
-@media (max-width: 480px) {
-    .hero-equipment h1 {
-        font-size: 2rem;
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+    /* NAVIGATION */
+    .logo {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
     }
 
-    .equipment-stats {
+    /* HERO */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 0 80px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        letter-spacing: 4px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .hero-cta {
+        padding: 15px 40px;
+        font-size: 0.9rem;
+    }
+
+    .scroll-indicator {
+        bottom: 20px;
+    }
+
+    /* FEATURES */
+    .features {
+        padding: 60px 15px;
+    }
+
+    .section-label {
+        font-size: 0.75rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        letter-spacing: 3px;
+        margin-bottom: 40px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .feature-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .feature-title {
+        font-size: 1.1rem;
+    }
+
+    .feature-description {
+        font-size: 0.9rem;
+    }
+
+    /* EXPERIENCE */
+    .experience-image {
+        min-height: 300px;
+    }
+
+    .experience-content {
+        padding: 50px 20px;
+    }
+
+    .experience-number {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .experience-title {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    .experience-text {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+
+    /* PRICING */
+    .pricing {
+        padding: 60px 15px;
+    }
+
+    .pricing-card {
+        padding: 40px 25px;
+    }
+
+    .pricing-price {
+        font-size: 3rem;
+    }
+
+    .pricing-features li {
+        font-size: 0.85rem;
+        padding: 10px 0;
+    }
+
+    /* APP DOWNLOAD */
+    .app-download {
+        padding: 60px 15px;
+    }
+
+    .app-download-text {
+        font-size: 1rem;
+    }
+
+    .app-store-buttons {
+        flex-direction: column;
+    }
+
+    .store-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .app-features {
         grid-template-columns: 1fr;
     }
 
-    .equipment-title {
+    .app-phone {
+        width: 240px;
+        height: 490px;
+    }
+
+    /* CTA */
+    .cta-section {
+        padding: 60px 15px;
+    }
+
+    .cta-title {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    .cta-text {
+        font-size: 1rem;
+    }
+
+    .cta-primary,
+    .cta-secondary {
+        padding: 15px 30px;
+        font-size: 0.9rem;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 60px 20px 30px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-brand {
+        font-size: 1.6rem;
+    }
+
+    .footer-tagline {
+        font-size: 0.85rem;
+    }
+
+    .footer-section h4 {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem;
+        padding: 20px 0;
+        line-height: 1.6;
+    }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+    /* HERO */
+    .hero-title {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    /* FEATURES */
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .feature-title {
+        font-size: 1rem;
+    }
+
+    /* EXPERIENCE */
+    .experience-title {
         font-size: 1.5rem;
     }
 
-    .equipment-image {
-        height: 250px;
+    .experience-text {
+        font-size: 0.9rem;
+    }
+
+    /* PRICING */
+    .pricing-price {
+        font-size: 2.5rem;
+    }
+
+    /* APP DOWNLOAD */
+    .app-phone {
+        width: 220px;
+        height: 450px;
+    }
+
+    .phone-content {
+        padding: 20px 15px;
+    }
+
+    .app-logo-phone {
+        font-size: 1.5rem;
+    }
+
+    /* CTA */
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .cta-primary,
+    .cta-secondary {
+        padding: 12px 25px;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    /* FOOTER */
+    .footer-brand {
+        font-size: 1.4rem;
     }
 }
